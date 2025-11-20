@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../Assets/">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Home| Weitz Hotel</title>
+    <style>
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient-primary);
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: slideInLeft 1s ease 0.5s forwards;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: slideInLeft 1s ease 0.7s forwards;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+            animation: slideInLeft 1s ease 0.9s forwards;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-placeholder {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            animation: slideInRight 1s ease 1.1s forwards;
+        }
+
+        .hero-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-placeholder p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weitz Hotel</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About_us.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Weitz Hotel</h1>
+            <p class="hero-subtitle">Experience luxury and comfort in the heart of the city</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-secondary">Book Your Stay</a>
+                <a href="#gallery" class="btn btn-secondary">View Gallery</a>
+                <a href="Our_team.html" class="btn btn-secondary">Our Team</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-placeholder">
+                <i class="fas fa-hotel"></i>
+                <p>Luxury Hotel Experience</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="form-groups form-group">
+            <form id="loginForm">
+                <label for="email" style="color: aliceblue;">Email:</label>
+                <input type="email" id="email" required>
+                <label for="password" style="color: aliceblue;">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit" class="butn" >Login</button>
+            </form>
+        </div>
+    </section>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>Take a virtual tour of our beautiful hotel</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Lobby.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Dining.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Swimming_Pool.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Deluxe.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Bathroom.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Horizon.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Presidential.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Dining1.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Swimming pool.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Deluxe1.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/pexels-quark-studio-1159039-2507010.jpg">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="../Assets/Bar.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book Your Stay</h2>
+                <p>Reserve your perfect room today</p>
+            </div>
+            <div class="booking-form">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Check-in Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Check-out Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Guests</label>
+                            <select required>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5+">5+ Guests</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Room Type</label>
+                            <select required>
+                                <option value="deluxe">Deluxe Room</option>
+                                <option value="executive">Executive Suite</option>
+                                <option value="presidential">Presidential Suite</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Check Availability</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Weitz Hotel</h3>
+                    <h3>Team Coco Melon</h3>
+                    <p>Experience luxury and comfort in the heart of the city. Your perfect stay awaits.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luthuli Avenue, Kampala</p>
+                    <p><i class="fas fa-phone"></i> + (256) 788 456 365</p>
+                    <p><i class="fas fa-envelope"></i> info@weitzhotel.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Weitz Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
