@@ -252,7 +252,7 @@ nav ul{
 
 /* Background Image */
 body {
-    background-image: url(../Assets/background_image1.jpg);
+    background-image: url(background_image1.jpg);
     background-size: cover;
 }
 
